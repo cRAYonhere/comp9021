@@ -1,0 +1,956 @@
+TEST 1 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_a.txt")'
+Traceback (most recent call last):
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in __init__
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in <listcomp>
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in <listcomp>
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+ValueError: invalid literal for int() with base 10: 'P'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 27, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 1 END
+
+TEST 2 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_b.txt")'
+Traceback (most recent call last):
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in __init__
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in <listcomp>
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 25, in <listcomp>
+    self.sudoku = [[int(character) for character in element] for element in self.lines]
+ValueError: invalid literal for int() with base 10: '*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 27, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 2 END
+
+TEST 3 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_c.txt")'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 33, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 3 END
+
+TEST 4 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_d.txt")'
+TEST 4 END
+
+TEST 5 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_e.txt")'
+TEST 5 END
+
+TEST 6 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_f.txt")'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 30, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 6 END
+
+TEST 7 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_g.txt")'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 33, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 7 END
+
+TEST 8 BEGIN
+$ python3 -c 'from sudoku import * ; Sudoku("wgrid_h.txt")'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/emartin/Documents/COMP9021/Assignments/Assignment_2/Submissions/5181159/sudoku.py", line 33, in __init__
+    raise SudokuError('Incorrect input')
+sudoku.SudokuError: Incorrect input
+TEST 8 END
+
+TEST 9 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_a.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[2, 0, 0, 5, 0, 0, 0, 0, 0]
+[0, 0, 1, 4, 0, 0, 5, 7, 3]
+[0, 3, 0, 1, 0, 0, 0, 0, 6]
+[0, 0, 5, 8, 9, 0, 0, 0, 0]
+[0, 7, 3, 0, 5, 0, 9, 8, 2]
+[0, 9, 0, 3, 0, 0, 0, 5, 4]
+[0, 0, 0, 0, 6, 0, 0, 0, 8]
+[2, 0, 0, 9, 8, 0, 0, 0, 0]
+[3, 0, 6, 0, 0, 0, 0, 1, 0]
+TEST 9 END
+
+TEST 10 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_b.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 0, 0, 0, 0, 0, 0, 8, 0]
+[4, 2, 0, 8, 6, 0, 1, 0, 0]
+[0, 0, 6, 9, 0, 7, 0, 4, 0]
+[6, 3, 0, 0, 0, 0, 0, 0, 9]
+[1, 0, 2, 3, 0, 0, 0, 0, 0]
+[0, 0, 8, 0, 4, 0, 0, 6, 4]
+[0, 0, 0, 0, 0, 0, 9, 0, 0]
+[0, 0, 4, 0, 0, 0, 6, 0, 0]
+[9, 0, 0, 7, 0, 4, 0, 0, 5]
+TEST 10 END
+
+TEST 11 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_c.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 0, 0, 0, 0, 6, 0, 0, 0]
+[0, 2, 0, 1, 7, 5, 6, 0, 0]
+[0, 7, 0, 0, 0, 0, 0, 0, 0]
+[0, 3, 9, 4, 0, 0, 0, 0, 8]
+[6, 0, 0, 0, 3, 0, 1, 0, 0]
+[0, 0, 0, 0, 0, 0, 9, 0, 0]
+[0, 0, 0, 8, 5, 0, 0, 0, 4]
+[0, 0, 1, 7, 0, 0, 0, 2, 0]
+[0, 0, 0, 0, 0, 1, 2, 7, 0]
+TEST 11 END
+
+TEST 12 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_d.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 8, 7, 0, 0, 0, 0, 1, 3]
+[1, 0, 0, 0, 0, 6, 7, 0, 5]
+[0, 0, 0, 0, 0, 5, 0, 0, 0]
+[0, 0, 2, 1, 4, 0, 0, 0, 0]
+[0, 4, 0, 0, 0, 9, 6, 0, 0]
+[3, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 8, 0, 2, 0, 7, 9, 0]
+[0, 0, 0, 0, 5, 0, 4, 0, 0]
+TEST 12 END
+
+TEST 13 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_e.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 0, 7, 0, 8, 0, 0, 0, 0]
+[2, 0, 0, 1, 0, 0, 0, 8, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 9]
+[0, 0, 8, 0, 9, 0, 7, 5, 0]
+[0, 0, 0, 8, 0, 0, 0, 0, 0]
+[5, 0, 0, 0, 0, 0, 2, 6, 0]
+[8, 0, 6, 0, 0, 0, 0, 4, 0]
+[7, 0, 0, 6, 0, 1, 0, 0, 0]
+[4, 5, 0, 4, 0, 0, 0, 0, 1]
+TEST 13 END
+
+TEST 14 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_f.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 0, 0, 1, 0, 0, 0, 9, 0]
+[0, 0, 0, 0, 0, 0, 0, 5, 3]
+[1, 5, 0, 9, 6, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 4, 1, 5]
+[0, 0, 9, 0, 0, 0, 0, 0, 0]
+[0, 8, 0, 0, 0, 3, 0, 0, 0]
+[0, 0, 0, 3, 0, 0, 2, 4, 0]
+[0, 0, 6, 0, 0, 2, 0, 0, 0]
+[9, 0, 1, 0, 3, 0, 0, 0, 0]
+TEST 14 END
+
+TEST 15 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_g.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[0, 2, 0, 0, 8, 0, 7, 0, 0]
+[0, 0, 0, 0, 0, 0, 3, 0, 0]
+[0, 0, 0, 0, 4, 0, 5, 0, 2]
+[0, 0, 7, 0, 6, 2, 0, 0, 0]
+[0, 0, 0, 0, 7, 5, 0, 0, 9]
+[9, 0, 8, 0, 2, 0, 0, 0, 0]
+[0, 7, 0, 1, 0, 0, 0, 0, 0]
+[4, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 0, 0, 0, 0, 7, 2, 0, 5]
+TEST 15 END
+
+TEST 16 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_h.txt") ; sudoku.preassess()'
+There is clearly no solution.
+[8, 4, 5, 2, 9, 6, 7, 3, 1]
+[3, 2, 7, 1, 8, 5, 4, 6, 9]
+[1, 6, 9, 3, 7, 4, 8, 2, 5]
+[7, 9, 3, 4, 5, 2, 1, 8, 6]
+[6, 1, 8, 7, 3, 9, 2, 5, 4]
+[2, 5, 4, 8, 6, 1, 9, 7, 3]
+[5, 7, 1, 9, 2, 3, 1, 4, 8]
+[4, 8, 6, 5, 1, 7, 3, 9, 2]
+[9, 3, 2, 6, 4, 8, 5, 1, 7]
+TEST 16 END
+
+TEST 17 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_1.txt") ; sudoku.preassess()'
+There might be a solution.
+[4, 0, 0, 5, 0, 0, 0, 0, 0]
+[0, 0, 1, 4, 0, 0, 5, 7, 3]
+[0, 3, 0, 1, 0, 0, 0, 0, 6]
+[0, 0, 5, 8, 9, 0, 0, 0, 0]
+[0, 7, 3, 0, 5, 0, 9, 8, 2]
+[0, 9, 0, 3, 0, 0, 0, 5, 4]
+[0, 0, 0, 0, 6, 0, 0, 0, 8]
+[2, 0, 0, 9, 8, 0, 0, 0, 0]
+[3, 0, 6, 0, 0, 0, 0, 1, 0]
+TEST 17 END
+
+TEST 18 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_2.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 0, 0, 0, 0, 0, 0, 8, 0]
+[4, 2, 0, 8, 6, 0, 1, 0, 0]
+[0, 0, 6, 9, 0, 7, 0, 4, 0]
+[6, 3, 0, 0, 0, 0, 0, 0, 9]
+[1, 0, 2, 3, 0, 0, 0, 0, 0]
+[0, 0, 8, 0, 4, 0, 0, 6, 1]
+[0, 0, 0, 0, 0, 0, 9, 0, 0]
+[0, 0, 4, 0, 0, 0, 6, 0, 0]
+[9, 0, 0, 7, 0, 4, 0, 0, 5]
+TEST 18 END
+
+TEST 19 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_3.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 0, 0, 0, 0, 6, 0, 0, 0]
+[0, 2, 0, 1, 7, 5, 6, 0, 0]
+[0, 7, 0, 0, 0, 0, 0, 0, 0]
+[0, 3, 9, 4, 0, 0, 0, 0, 8]
+[6, 0, 0, 0, 3, 0, 1, 0, 0]
+[0, 0, 0, 0, 0, 0, 9, 0, 0]
+[0, 0, 0, 8, 5, 0, 0, 0, 4]
+[0, 0, 1, 7, 0, 0, 0, 5, 0]
+[0, 0, 0, 0, 0, 1, 2, 7, 0]
+TEST 19 END
+
+TEST 20 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_4.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 8, 7, 0, 0, 0, 0, 1, 3]
+[1, 0, 0, 0, 0, 6, 7, 0, 5]
+[0, 0, 0, 0, 0, 5, 0, 0, 0]
+[0, 0, 2, 1, 4, 0, 0, 0, 0]
+[0, 4, 0, 0, 0, 9, 6, 0, 0]
+[3, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 8, 0, 2, 0, 5, 9, 0]
+[0, 0, 0, 0, 5, 0, 4, 0, 0]
+TEST 20 END
+
+TEST 21 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_5.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 0, 7, 0, 8, 0, 0, 0, 0]
+[2, 0, 0, 1, 0, 0, 0, 8, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 9]
+[0, 0, 8, 0, 9, 0, 7, 5, 0]
+[0, 0, 0, 8, 0, 0, 0, 0, 0]
+[5, 0, 0, 0, 0, 0, 2, 6, 0]
+[8, 0, 6, 0, 0, 0, 0, 4, 0]
+[7, 0, 0, 6, 0, 1, 0, 0, 0]
+[4, 5, 0, 7, 0, 0, 0, 0, 1]
+TEST 21 END
+
+TEST 22 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_6.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 0, 0, 1, 0, 0, 0, 9, 0]
+[0, 0, 0, 0, 0, 0, 0, 5, 3]
+[1, 5, 0, 9, 6, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 4, 1, 5]
+[0, 0, 9, 0, 0, 0, 0, 0, 0]
+[0, 8, 0, 0, 0, 3, 0, 0, 0]
+[0, 0, 0, 3, 0, 0, 2, 4, 0]
+[0, 0, 6, 0, 0, 2, 0, 0, 0]
+[9, 0, 1, 0, 7, 0, 0, 0, 0]
+TEST 22 END
+
+TEST 23 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_7.txt") ; sudoku.preassess()'
+There might be a solution.
+[0, 2, 0, 0, 8, 0, 7, 0, 0]
+[0, 0, 0, 0, 0, 0, 3, 0, 0]
+[0, 0, 0, 0, 4, 0, 5, 0, 2]
+[0, 0, 7, 0, 6, 2, 0, 0, 0]
+[0, 0, 0, 0, 7, 5, 0, 0, 9]
+[9, 0, 8, 0, 3, 0, 0, 0, 0]
+[0, 7, 0, 1, 0, 0, 0, 0, 0]
+[4, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 0, 0, 0, 0, 7, 2, 0, 5]
+TEST 23 END
+
+TEST 24 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_8.txt") ; sudoku.preassess()'
+There might be a solution.
+[8, 4, 5, 2, 9, 6, 7, 3, 1]
+[3, 2, 7, 1, 8, 5, 4, 6, 9]
+[1, 6, 9, 3, 7, 4, 8, 2, 5]
+[7, 9, 3, 4, 5, 2, 1, 8, 6]
+[6, 1, 8, 7, 3, 9, 2, 5, 4]
+[2, 5, 4, 8, 6, 1, 9, 7, 3]
+[5, 7, 1, 9, 2, 3, 6, 4, 8]
+[4, 8, 6, 5, 1, 7, 3, 9, 2]
+[9, 3, 2, 6, 4, 8, 5, 1, 7]
+TEST 24 END
+
+TEST 25 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_1.txt") ; sudoku.bare_tex_output()'
+TEST 25 END
+
+TEST 26 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_2.txt") ; sudoku.bare_tex_output()'
+TEST 26 END
+
+TEST 27 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_3.txt") ; sudoku.bare_tex_output()'
+TEST 27 END
+
+TEST 28 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_4.txt") ; sudoku.bare_tex_output()'
+TEST 28 END
+
+TEST 29 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_5.txt") ; sudoku.bare_tex_output()'
+TEST 29 END
+
+TEST 30 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_6.txt") ; sudoku.bare_tex_output()'
+TEST 30 END
+
+TEST 31 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_7.txt") ; sudoku.bare_tex_output()'
+TEST 31 END
+
+TEST 32 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_8.txt") ; sudoku.bare_tex_output()'
+TEST 32 END
+
+TEST 33 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_1.txt") ; sudoku.forced_tex_output()'
+5 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+2 deleted.
+2 deleted.
+8 deleted.
+TEST 33 END
+
+TEST 34 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_2.txt") ; sudoku.forced_tex_output()'
+4 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+6 deleted.
+6 deleted.
+6 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+3 deleted.
+7 deleted.
+2 deleted.
+6 deleted.
+7 deleted.
+8 deleted.
+9 deleted.
+1 deleted.
+5 deleted.
+TEST 34 END
+
+TEST 35 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_3.txt") ; sudoku.forced_tex_output()'
+1 deleted.
+6 deleted.
+8 deleted.
+TEST 35 END
+
+TEST 36 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_4.txt") ; sudoku.forced_tex_output()'
+3 deleted.
+TEST 36 END
+
+TEST 37 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_5.txt") ; sudoku.forced_tex_output()'
+8 deleted.
+8 deleted.
+8 deleted.
+8 deleted.
+7 deleted.
+1 deleted.
+6 deleted.
+4 deleted.
+7 deleted.
+TEST 37 END
+
+TEST 38 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_6.txt") ; sudoku.forced_tex_output()'
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+9 deleted.
+3 deleted.
+5 deleted.
+2 deleted.
+3 deleted.
+TEST 38 END
+
+TEST 39 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_7.txt") ; sudoku.forced_tex_output()'
+1 deleted.
+9 deleted.
+1 deleted.
+2 deleted.
+5 deleted.
+7 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+7 deleted.
+8 deleted.
+TEST 39 END
+
+TEST 40 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_8.txt") ; sudoku.forced_tex_output()'
+TEST 40 END
+
+TEST 41 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_1.txt") ; sudoku.marked_tex_output()'
+5 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+2 deleted.
+2 deleted.
+8 deleted.
+(0, 1) [2, 6]
+(0, 2) [8, 9, 7]
+(0, 4) [2, 3, 7]
+(0, 5) [3, 6, 7, 8, 9]
+(0, 6) [8, 1, 2]
+(0, 7) [9, 2]
+(0, 8) [1, 9]
+(1, 0) [9, 6]
+(1, 1) [2, 6]
+(1, 4) [2]
+(1, 5) [8, 9, 6]
+(2, 2) [8, 9, 7]
+(2, 4) [2, 7]
+(2, 5) [8, 9, 7]
+(2, 6) [8, 2, 4]
+(2, 7) [9, 2, 4]
+(3, 0) [1, 6]
+(3, 6) [1, 3, 6, 7]
+(3, 7) [3, 6]
+(3, 8) [1, 7]
+(4, 0) [1, 6]
+(4, 3) [6]
+(5, 4) [1, 7]
+(5, 5) [1, 6, 7]
+(5, 6) [1, 6, 7]
+(6, 0) [1, 9, 7]
+(6, 1) [1, 5]
+(6, 2) [9, 4, 7]
+(6, 3) [2, 7]
+(6, 5) [1, 3, 5, 7]
+(6, 6) [2, 3, 4, 7]
+(6, 7) [9, 2, 3, 4]
+(7, 1) [1, 5]
+(7, 2) [4, 7]
+(7, 5) [1, 3, 5, 7]
+(7, 6) [3, 4, 6, 7]
+(7, 7) [3, 4, 6]
+(7, 8) [5, 7]
+(8, 3) [2, 7]
+(8, 5) [5, 7]
+(8, 6) [2, 7]
+(8, 8) [9, 5, 7]
+TEST 41 END
+
+TEST 42 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_2.txt") ; sudoku.marked_tex_output()'
+4 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+6 deleted.
+6 deleted.
+6 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+3 deleted.
+7 deleted.
+2 deleted.
+6 deleted.
+7 deleted.
+8 deleted.
+9 deleted.
+1 deleted.
+5 deleted.
+(0, 0) [3, 5]
+(0, 1) [1, 5, 7]
+(0, 4) [1, 2, 3, 5]
+(0, 5) [1, 2, 3, 5]
+(0, 6) [2, 5, 7]
+(1, 2) [3, 7]
+(1, 5) [3, 5]
+(1, 8) [3, 7]
+(2, 0) [8, 3, 5]
+(2, 1) [8, 1, 5]
+(2, 4) [1, 2, 3, 5]
+(2, 6) [2, 5]
+(2, 8) [2, 3]
+(4, 6) [8, 5, 7]
+(4, 7) [5, 7]
+(4, 8) [8, 7]
+(5, 3) [2, 5]
+(5, 5) [2, 5]
+(6, 0) [8, 2, 3, 5]
+(6, 1) [8, 1, 5, 7]
+(6, 2) [1, 3, 7]
+(6, 4) [1, 2, 3, 5, 8]
+(6, 5) [1, 2, 3, 5]
+(6, 7) [1, 3, 7]
+(7, 0) [8, 2, 3, 5]
+(7, 1) [8, 1, 5, 7]
+(7, 3) [2, 5]
+(7, 4) [1, 2, 3, 5, 8]
+(7, 7) [1, 3, 7]
+(7, 8) [8, 2, 3, 7]
+(8, 2) [1, 3]
+(8, 4) [8, 1, 2, 3]
+(8, 6) [8, 2]
+(8, 7) [1, 3]
+TEST 42 END
+
+TEST 43 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_3.txt") ; sudoku.marked_tex_output()'
+1 deleted.
+6 deleted.
+8 deleted.
+(0, 0) [1, 3, 4, 5, 8, 9]
+(0, 1) [1, 4, 5, 8, 9]
+(0, 2) [8, 3, 4, 5]
+(0, 3) [9, 2, 3]
+(0, 4) [8, 9, 2, 4]
+(0, 6) [3, 4, 5, 7]
+(0, 7) [2, 3, 4, 8, 9]
+(0, 8) [1, 2, 3, 5, 7, 9]
+(1, 0) [8, 9, 3, 4]
+(1, 2) [8, 3, 4]
+(1, 7) [8, 9, 3, 4]
+(1, 8) [9, 3]
+(2, 0) [1, 3, 4, 5, 8, 9]
+(2, 3) [9, 2, 3]
+(2, 4) [8, 9, 2, 4]
+(2, 5) [2, 3, 4, 8, 9]
+(2, 6) [3, 4, 5]
+(2, 7) [2, 3, 4, 8, 9]
+(2, 8) [1, 2, 3, 5, 9]
+(3, 0) [1, 2, 5, 7]
+(3, 4) [1, 2, 6]
+(3, 5) [2, 7]
+(3, 6) [5, 7]
+(3, 7) [2, 6]
+(4, 1) [8, 4, 5]
+(4, 2) [2, 4, 5, 7, 8]
+(4, 3) [9, 2, 5]
+(4, 5) [8, 9, 2, 7]
+(4, 7) [2, 4]
+(4, 8) [2, 5, 7]
+(5, 0) [1, 2, 4, 5, 7, 8]
+(5, 1) [8, 1, 4, 5]
+(5, 2) [2, 4, 5, 7, 8]
+(5, 3) [2, 5, 6]
+(5, 4) [8, 1, 2, 6]
+(5, 5) [8, 2, 7]
+(5, 7) [2, 3, 4, 6]
+(5, 8) [2, 3, 5, 6, 7]
+(6, 0) [9, 2, 3, 7]
+(6, 1) [9, 6]
+(6, 2) [2, 3, 7]
+(6, 5) [9, 2, 3]
+(6, 6) [3]
+(7, 0) [9, 2, 3, 4]
+(7, 1) [9, 4, 6]
+(7, 4) [9, 2, 4, 6]
+(7, 5) [9, 2, 3, 4]
+(7, 8) [9, 3, 6]
+(8, 0) [3, 4, 5, 8, 9]
+(8, 1) [4, 5, 6, 8, 9]
+(8, 2) [8, 3, 4, 5]
+(8, 3) [9, 3, 6]
+(8, 4) [9, 4, 6]
+(8, 8) [9, 3, 6]
+TEST 43 END
+
+TEST 44 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_4.txt") ; sudoku.marked_tex_output()'
+3 deleted.
+(0, 0) [2, 4, 5, 6, 9]
+(0, 1) [2, 3, 5, 6, 9]
+(0, 2) [3, 4, 5, 6, 9]
+(0, 3) [2, 3, 4, 5, 7, 8, 9]
+(0, 4) [1, 3, 7, 8, 9]
+(0, 5) [1, 2, 3, 4, 7, 8]
+(0, 6) [8, 9, 2]
+(0, 7) [8, 2, 4, 6]
+(0, 8) [2, 4, 6, 8, 9]
+(1, 0) [2, 4, 5, 6, 9]
+(1, 3) [9, 2, 4, 5]
+(1, 4) [9]
+(1, 5) [2, 4]
+(1, 6) [9, 2]
+(2, 1) [9, 2, 3]
+(2, 2) [9, 3, 4]
+(2, 3) [2, 3, 4, 8, 9]
+(2, 4) [8, 9, 3]
+(2, 7) [8, 2, 4]
+(3, 0) [8, 9, 6, 7]
+(3, 1) [1, 3, 6, 7, 9]
+(3, 2) [1, 3, 6, 9]
+(3, 3) [2, 3, 6, 7, 8]
+(3, 4) [8, 3, 6, 7]
+(3, 6) [1, 2, 3, 8, 9]
+(3, 7) [8, 2, 4, 7]
+(3, 8) [1, 2, 4, 7, 8, 9]
+(4, 0) [5, 6, 7, 8, 9]
+(4, 1) [3, 5, 6, 7, 9]
+(4, 5) [8, 3, 7]
+(4, 6) [8, 9, 3]
+(4, 7) [8, 5, 7]
+(4, 8) [8, 9, 7]
+(5, 0) [8, 5, 7]
+(5, 2) [1, 3, 5]
+(5, 3) [8, 2, 3, 7]
+(5, 4) [8, 3, 7]
+(5, 7) [8, 2, 5, 7]
+(5, 8) [8, 1, 2, 7]
+(6, 1) [1, 2, 5, 6, 7, 9]
+(6, 2) [1, 4, 5, 6, 9]
+(6, 3) [4, 6, 7, 8, 9]
+(6, 4) [1, 6, 7, 8, 9]
+(6, 5) [8, 1, 4, 7]
+(6, 6) [8, 1, 2]
+(6, 7) [8, 2, 6, 7]
+(6, 8) [1, 2, 6, 7, 8]
+(7, 0) [4, 6, 7]
+(7, 1) [1, 6, 7]
+(7, 3) [3, 4, 6, 7]
+(7, 5) [1, 3, 4, 7]
+(7, 8) [1, 6, 7]
+(8, 0) [9, 2, 6, 7]
+(8, 1) [1, 2, 6, 7, 9]
+(8, 2) [1, 6, 9]
+(8, 3) [8, 9, 6, 7]
+(8, 5) [8, 1, 7]
+(8, 8) [1, 2, 6, 7, 8]
+TEST 44 END
+
+TEST 45 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_5.txt") ; sudoku.marked_tex_output()'
+8 deleted.
+8 deleted.
+8 deleted.
+8 deleted.
+7 deleted.
+1 deleted.
+6 deleted.
+4 deleted.
+7 deleted.
+(0, 0) [1, 3, 6, 9]
+(0, 1) [9, 3, 4, 6]
+(0, 3) [2, 3, 4, 5, 9]
+(0, 5) [2, 3, 4, 5, 6, 9]
+(0, 6) [1, 3, 4, 5]
+(0, 7) [1, 2, 3]
+(0, 8) [2, 3, 4, 5, 6]
+(1, 1) [9, 3, 4, 6]
+(1, 2) [9, 3, 4, 5]
+(1, 4) [3, 5, 6, 7]
+(1, 5) [3, 4, 5, 6, 7, 9]
+(1, 6) [3, 4, 5]
+(1, 8) [3, 4, 5, 6]
+(2, 0) [1, 3, 6]
+(2, 2) [1, 3, 4, 5]
+(2, 3) [2, 3, 4, 5]
+(2, 4) [2, 3, 5, 6]
+(2, 5) [2, 3, 4, 5, 6]
+(2, 6) [1, 3, 4, 5]
+(3, 0) [1, 3, 6]
+(3, 1) [2, 3, 4, 6]
+(3, 3) [2, 3, 4]
+(3, 5) [2, 3, 4, 6]
+(3, 8) [3, 4]
+(4, 0) [1, 3, 6, 9]
+(4, 1) [2, 3, 4, 6, 7, 9]
+(4, 2) [1, 2, 3, 4, 9]
+(4, 4) [1, 2, 3, 5, 6, 7]
+(4, 5) [2, 3, 4, 5, 6, 7]
+(4, 6) [1, 3, 4, 9]
+(4, 7) [1, 3, 9]
+(4, 8) [3, 4]
+(5, 1) [9, 3, 4, 7]
+(5, 2) [1, 3, 4, 9]
+(5, 3) [3, 4]
+(5, 4) [1, 3, 7]
+(5, 5) [3, 4, 7]
+(6, 3) [9, 2, 3, 5]
+(6, 4) [2, 3, 5]
+(6, 5) [9, 2, 3, 5]
+(6, 6) [9, 3, 5]
+(7, 1) [9, 2, 3]
+(7, 2) [9, 2, 3]
+(7, 7) [9, 2, 3]
+(7, 8) [2, 3, 5]
+(8, 2) [9, 2, 3]
+(8, 4) [2, 3]
+(8, 7) [9, 2, 3]
+TEST 45 END
+
+TEST 46 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_6.txt") ; sudoku.marked_tex_output()'
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+9 deleted.
+3 deleted.
+5 deleted.
+2 deleted.
+3 deleted.
+(0, 0) [2, 4, 6, 7, 8]
+(0, 1) [4, 6, 7]
+(0, 2) [8, 2, 4, 7]
+(0, 6) [8, 6, 7]
+(0, 8) [2, 4, 6, 7, 8]
+(1, 0) [2, 4, 6, 7, 8]
+(1, 2) [8, 2, 4, 7]
+(1, 3) [8, 2, 4, 7]
+(1, 4) [8, 2, 4]
+(1, 5) [8, 4, 7]
+(2, 5) [8, 4, 7]
+(2, 6) [8, 7]
+(2, 7) [8, 2, 7]
+(2, 8) [8, 2, 4, 7]
+(3, 0) [2, 3, 6, 7]
+(3, 1) [3, 6, 7]
+(3, 2) [2, 7]
+(3, 3) [8, 2, 6, 7]
+(3, 4) [8, 9, 2]
+(3, 5) [8, 9, 6, 7]
+(4, 0) [2, 3, 4, 5, 6, 7]
+(4, 3) [2, 4, 5, 6, 7, 8]
+(4, 4) [8, 2, 4, 5]
+(4, 5) [8, 4, 6, 7]
+(4, 6) [8, 3, 6, 7]
+(4, 7) [2, 3, 6, 7, 8]
+(4, 8) [8, 2, 6, 7]
+(5, 0) [2, 4, 5, 6, 7]
+(5, 2) [2, 4, 5, 7]
+(5, 3) [2, 4, 5, 6, 7]
+(5, 6) [9, 6, 7]
+(5, 7) [2, 6, 7]
+(5, 8) [9, 2, 6, 7]
+(6, 0) [8, 5, 7]
+(6, 1) [7]
+(6, 2) [8, 5, 7]
+(6, 4) [8, 9, 5]
+(6, 8) [8, 9, 6, 7]
+(7, 0) [3, 4, 5, 7, 8]
+(7, 1) [3, 4, 7]
+(7, 3) [8, 4, 5]
+(7, 4) [8, 9, 4, 5]
+(7, 6) [3, 5, 7, 8, 9]
+(7, 7) [8, 3, 7]
+(8, 3) [8, 4, 5, 6]
+(8, 5) [8, 4, 6]
+(8, 6) [8, 3, 5, 6]
+(8, 7) [8, 3, 6]
+(8, 8) [8, 6]
+TEST 46 END
+
+TEST 47 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_7.txt") ; sudoku.marked_tex_output()'
+1 deleted.
+9 deleted.
+1 deleted.
+2 deleted.
+5 deleted.
+7 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+7 deleted.
+8 deleted.
+(0, 0) [3, 6]
+(0, 2) [1, 3, 4, 6, 9]
+(0, 5) [9, 3, 6]
+(0, 7) [1, 6, 9]
+(0, 8) [1, 4, 6]
+(1, 1) [4, 5, 6, 8, 9]
+(1, 2) [9, 4, 5, 6]
+(1, 5) [9, 6]
+(1, 7) [8, 9, 6]
+(1, 8) [8, 4, 6]
+(2, 0) [8, 3, 6]
+(2, 1) [1, 3, 6, 8, 9]
+(2, 2) [1, 3, 6, 9]
+(2, 5) [9, 3, 6]
+(2, 7) [8, 1, 6, 9]
+(3, 0) [3, 5]
+(3, 1) [1, 3, 4, 5]
+(3, 6) [8, 1, 4]
+(3, 7) [8, 1, 3, 5]
+(3, 8) [8, 1, 3, 4]
+(4, 0) [2, 3, 6]
+(4, 1) [1, 3, 4, 6]
+(4, 2) [1, 2, 3, 4, 6]
+(4, 6) [1, 4, 6]
+(4, 7) [1, 2, 3, 6]
+(5, 1) [5, 6]
+(5, 6) [6]
+(5, 7) [2, 5, 6, 7]
+(5, 8) [6, 7]
+(6, 0) [2, 3, 5, 6, 8]
+(6, 2) [2, 3, 5, 6, 9]
+(6, 4) [9, 2, 5]
+(6, 6) [8, 9, 6]
+(6, 7) [8, 9, 3, 6]
+(6, 8) [8, 3, 6]
+(7, 1) [9, 3, 5, 6]
+(7, 2) [2, 3, 5, 6, 9]
+(7, 3) [3, 6]
+(7, 4) [9, 2, 5]
+(7, 6) [1, 6, 9]
+(7, 7) [1, 3, 6, 7, 9]
+(7, 8) [1, 3, 6, 7]
+(8, 1) [8, 9, 3, 6]
+(8, 2) [9, 3, 6]
+(8, 3) [3, 6]
+(8, 4) [9]
+TEST 47 END
+
+TEST 48 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_8.txt") ; sudoku.marked_tex_output()'
+TEST 48 END
+
+TEST 49 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_1.txt") ; sudoku.worked_tex_output()'
+5 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+2 deleted.
+2 deleted.
+8 deleted.
+TEST 49 END
+
+TEST 50 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_2.txt") ; sudoku.worked_tex_output()'
+4 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+6 deleted.
+6 deleted.
+6 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+9 deleted.
+3 deleted.
+7 deleted.
+2 deleted.
+6 deleted.
+7 deleted.
+8 deleted.
+9 deleted.
+1 deleted.
+5 deleted.
+TEST 50 END
+
+TEST 51 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_3.txt") ; sudoku.worked_tex_output()'
+1 deleted.
+6 deleted.
+8 deleted.
+TEST 51 END
+
+TEST 52 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_4.txt") ; sudoku.worked_tex_output()'
+3 deleted.
+TEST 52 END
+
+TEST 53 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_5.txt") ; sudoku.worked_tex_output()'
+8 deleted.
+8 deleted.
+8 deleted.
+8 deleted.
+7 deleted.
+1 deleted.
+6 deleted.
+4 deleted.
+7 deleted.
+TEST 53 END
+
+TEST 54 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_6.txt") ; sudoku.worked_tex_output()'
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+1 deleted.
+9 deleted.
+3 deleted.
+5 deleted.
+2 deleted.
+3 deleted.
+TEST 54 END
+
+TEST 55 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_7.txt") ; sudoku.worked_tex_output()'
+1 deleted.
+9 deleted.
+1 deleted.
+2 deleted.
+5 deleted.
+7 deleted.
+8 deleted.
+4 deleted.
+4 deleted.
+4 deleted.
+7 deleted.
+8 deleted.
+TEST 55 END
+
+TEST 56 BEGIN
+$ python3 -c 'from sudoku import * ; sudoku = Sudoku("grid_8.txt") ; sudoku.worked_tex_output()'
+TEST 56 END
+
